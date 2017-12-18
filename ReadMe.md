@@ -1,0 +1,74 @@
+This file provides a general description of the project, the data that
+was used and where it may be found, and the files included in the
+repository.
+
+------------------------------------------------------------------------
+
+### Purpose
+
+The purpose of the project was to take raw data and compile a tidy data
+table summarizing the raw measurements. The tidy data table meets the
+principles of: \* Variables are in individual columns (wide form) \*
+Clear, human readable variable names so it is clear which columns are
+which \* No duplicate observations (observations are in different rows)
+
+------------------------------------------------------------------------
+
+### Data Source
+
+The data being used in this project comes from the University of
+California, Irvine (UCI), Human Activity Recognition (HAR) Using
+Smartphones Data Set. The data set was built by recording inertial
+sensor readings from a smartphone strapped to subjects as they performed
+various activities. \* A discussion of the original study may be found
+here:
+<http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#>
+\* A video of the experiment including an example of the 6 recorded
+activities with one of the participants can be seen in the following
+link: <http://www.youtube.com/watch?v=XOEN9W05_4A> \* Original raw data
+for this project downloaded from:
+<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+\* Names for the tables in the raw data set can be found at:
+<http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.names>
+
+------------------------------------------------------------------------
+
+### Files
+
+The project includes the following files:
+
+-   'ReadMe.md' : This file provides a general description of the
+    project, the data that was used and where it may be found, and the
+    files included in the repository
+
+-   'CodeBook.md' : This file describes the
+
+\*'run\_analysis.R' : R script which performs the following steps: +
+Downloads the raw data + Merges the various data tables together +
+Extracts only the variables for the mean and standard deviation for each
+measurement + Updates the activity variable to contain descriptions of
+the activity being measured + Relabels the variables with user friendly
+names + Outputs the below tidy data table containing the mean for each
+mean and standard deviation variable grouped by unique subject-activity
+pairs
+
+-   'SubjectActivityAverages.txt' : the tidy data output of the above R
+    script. This can be read into R with:
+    read.table("SubjectActivityAverages.txt", header = TRUE)
+
+------------------------------------------------------------------------
+
+### License of Original Data Set
+
+Use of the original dataset in publications must be acknowledged by
+referencing the following publication \[1\]
+
+\[1\] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and
+Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity
+Recognition Using Smartphones. 21th European Symposium on Artificial
+Neural Networks, Computational Intelligence and Machine Learning, ESANN
+2013. Bruges, Belgium 24-26 April 2013.
+
+The dataset is distributed AS-IS and no responsibility implied or
+explicit can be addressed to the authors or their institutions for its
+use or misuse. Any commercial use is prohibited.
