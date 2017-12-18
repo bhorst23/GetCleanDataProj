@@ -25,11 +25,9 @@ The data being used in this project comes from the University of California, Irv
 
 The project includes the following files:
 
--   'ReadMe.md' : This file provides a general description of the
-    project, the data that was used and where it may be found, and the
-    files included in the repository
+-   'ReadMe.md' : This file provides a general description of the project, the data that was used and where it may be found, and the files included in the repository
 
--   'CodeBook.md' : This file describes the
+-   'CodeBook.md' : This file describes the source data, files used in the project, details the steps taken in the R script transformation of the data set, and describes the names of the variables in the output.
 
 -   'run\_analysis.R' : R script which performs the following steps: 
     - Downloads the raw data 
