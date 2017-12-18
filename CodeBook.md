@@ -57,7 +57,7 @@ Files Used in the Project Analysis
 
 This analysis made use of the following files: 
 #### Common files 
-+'features.txt': a table of 561 row with 2 variables ('featuresID' and 'featuresName') 
++ 'features.txt': a table of 561 row with 2 variables ('featuresID' and 'featuresName') 
 + 'activity\_labels.txt': a table of 6 rows and 2 variables ('activityID' and 'activityName') 
 #### Test dataset files - 2947 observations for each of the following 
 + 'test/subject\_test.txt': single variable 'subject' 
@@ -114,7 +114,7 @@ The 'run\_analysis.R' script performs the following functions:
 
 4.  Appropriately labels the data set with descriptive variable names.
 
--   A variable starting with "t"" or "f"" was changed to start with
+-   A variable starting with "t" or "f" was changed to start with
     "time" or "freq"
 -   Non-alphanumeric characters were removed and the initial letters of
     the "mean" and "std" segments were capitalized.
