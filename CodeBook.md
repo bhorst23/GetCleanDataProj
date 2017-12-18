@@ -95,8 +95,7 @@ The 'run\_analysis.R' script performs the following functions:
 -   The test and train tables were then combined using 'rbind' to create
     a complete dataset of 10299 rows of 564 variables.
 
-#### 2.  Extracts only the measurements on the mean and standard deviation
-    for each measurement.
+#### 2.  Extracts only the measurements on the mean and standard deviation for each measurement.
 
 -   A new table was created using only the subject, activityID, group,
     and a 'grep' search of the remaining variable to find only those
@@ -105,8 +104,7 @@ The 'run\_analysis.R' script performs the following functions:
     a mean or standard deviation of other measurements.)
 -   The resulting table contained 10299 rows of 69 variables.
 
-#### 3.  Uses descriptive activity names to name the activities in the data
-    set
+#### 3.  Uses descriptive activity names to name the activities in the data set
 
 -   The table created from 'activity\_labels.txt' was used as a
     reference to replace the 'activityID' with the corresponding
@@ -121,9 +119,7 @@ The 'run\_analysis.R' script performs the following functions:
 -   Non-alphanumeric characters were removed and the initial letters of
     the "mean" and "std" segments were capitalized.
 
-#### 5.  From the data set in step 4, creates a second, independent tidy data
-    set with the average of each variable for each activity and each
-    subject.
+#### 5.  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 -   The 'dplyr' package was loaded.
 -   The data set was grouped by 'subject' and 'activity'.
