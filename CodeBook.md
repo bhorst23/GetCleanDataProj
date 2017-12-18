@@ -64,7 +64,8 @@ This analysis made use of the following files:
 + 'test/subject\_test.txt': single variable 'subject' 
 + 'test/y\_test.txt': single variable 'activityID' 
 + 'test/X\_test.txt': 561 variables representing various measurements 
-#### Train data set files - 7352 observations for each of the following + 'train/subject\_train.txt': single variable 'subject' 
+#### Train data set files - 7352 observations for each of the following 
++ 'train/subject\_train.txt': single variable 'subject' 
 + 'train/y\_train.txt': single variable 'activityID' 
 + 'train/X\_train.txt': 561 variables representing various measurements
 
@@ -75,13 +76,13 @@ Details of the Transformation Performed by 'run\_analysis.R' Script
 
 The 'run\_analysis.R' script performs the following functions: 
 
-0. Downloads the raw data. 
+#### 0. Downloads the raw data. 
 
 - Checks to see if there is a directory to save data and working files in, and creates one if it does not already exist.
 - Checks to see if the data has already been downloaded, and then downloads it from the URL specified in the ReadMe if necessary (<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>).
 - Unzips the data set.
 
-1.  Merges the training and the test sets to create one data set.
+#### 1.  Merges the training and the test sets to create one data set.
 
 -   Each of the above tables were read using 'read.table'.
 -   The data tables read from 'X\_test.txt' and 'X\_train.txt' were
@@ -94,7 +95,7 @@ The 'run\_analysis.R' script performs the following functions:
 -   The test and train tables were then combined using 'rbind' to create
     a complete dataset of 10299 rows of 564 variables.
 
-2.  Extracts only the measurements on the mean and standard deviation
+#### 2.  Extracts only the measurements on the mean and standard deviation
     for each measurement.
 
 -   A new table was created using only the subject, activityID, group,
@@ -104,7 +105,7 @@ The 'run\_analysis.R' script performs the following functions:
     a mean or standard deviation of other measurements.)
 -   The resulting table contained 10299 rows of 69 variables.
 
-3.  Uses descriptive activity names to name the activities in the data
+#### 3.  Uses descriptive activity names to name the activities in the data
     set
 
 -   The table created from 'activity\_labels.txt' was used as a
@@ -113,14 +114,14 @@ The 'run\_analysis.R' script performs the following functions:
 -   The variable in the data set was renamed to 'activity' to reflect
     that it was no longer an ID
 
-4.  Appropriately labels the data set with descriptive variable names.
+#### 4.  Appropriately labels the data set with descriptive variable names.
 
 -   A variable starting with "t" or "f" was changed to start with
     "time" or "freq"
 -   Non-alphanumeric characters were removed and the initial letters of
     the "mean" and "std" segments were capitalized.
 
-5.  From the data set in step 4, creates a second, independent tidy data
+#### 5.  From the data set in step 4, creates a second, independent tidy data
     set with the average of each variable for each activity and each
     subject.
 
